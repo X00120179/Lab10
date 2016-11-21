@@ -6,7 +6,7 @@
   </header>
   <section class="main"> 
     <ul class="todo-list">
-      <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+      <li *ngFor="let todo of todos | async" [class.completed]="todo.complete">
         <div class="view">
           <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" 
           [checked]="todo.complete">
